@@ -143,8 +143,7 @@ Copernicus DEM
 
 ### Business plugin
 
-A .yaml file not implemented yet
-
+<To be defined>
 
 ## COnfiguration file
 
