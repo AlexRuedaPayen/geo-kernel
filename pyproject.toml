@@ -1,0 +1,31 @@
+[project]
+name = "geokernel"
+version = "0.1.0"
+description = "High-performance geospatial feature computation over spatial assets."
+requires-python = ">=3.11"
+dependencies = [
+    "geopandas",
+    "rasterio",
+    "pyyaml",
+    "pyarrow",
+    "numpy",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+]
+
+[project.scripts]
+geokernel = "geokernel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["geokernel*"]
+exclude = ["data*", "tests*", "examples*", "docs*"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

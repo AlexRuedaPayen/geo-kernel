@@ -1,0 +1,358 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-07-02T17:25:14Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5211123",
+        "highway": "residential",
+        "lane_markings": "no",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Rue de Monttessuy",
+        "name:etymology:wikidata": "Q3121367",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "source:maxspeed": "FR:urban",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2976695,
+            48.8592284
+          ],
+          [
+            2.2978222,
+            48.8592578
+          ],
+          [
+            2.3006083,
+            48.8598273
+          ],
+          [
+            2.3006789,
+            48.8598411
+          ]
+        ]
+      },
+      "id": "way/5211123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/19712853",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Avenue Élisée Reclus",
+        "name:etymology:wikidata": "Q20951",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "sign"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2990545,
+            48.8575157
+          ],
+          [
+            2.2989789,
+            48.8575679
+          ],
+          [
+            2.2980386,
+            48.8581794
+          ],
+          [
+            2.2979608,
+            48.8582298
+          ],
+          [
+            2.2978852,
+            48.8582786
+          ],
+          [
+            2.2969656,
+            48.8588681
+          ],
+          [
+            2.2968652,
+            48.8589324
+          ]
+        ]
+      },
+      "id": "way/19712853"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/19712883",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Avenue Émile Pouvillon",
+        "name:etymology:wikidata": "Q3588706",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "FR:urban"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2990545,
+            48.8575157
+          ],
+          [
+            2.2989363,
+            48.857496
+          ],
+          [
+            2.2984394,
+            48.8574133
+          ]
+        ]
+      },
+      "id": "way/19712883"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/19712901",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rue du Maréchal Harispe",
+        "name:etymology:wikidata": "Q128807",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2985733,
+            48.8586493
+          ],
+          [
+            2.2984875,
+            48.858589
+          ],
+          [
+            2.2980534,
+            48.8582937
+          ],
+          [
+            2.2979608,
+            48.8582298
+          ]
+        ]
+      },
+      "id": "way/19712901"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/19712914",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Rue du Maréchal Harispe",
+        "name:etymology:wikidata": "Q128807",
+        "sidewalk:both": "separate"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2979608,
+            48.8582298
+          ],
+          [
+            2.2978707,
+            48.8581681
+          ],
+          [
+            2.2975693,
+            48.8579716
+          ]
+        ]
+      },
+      "id": "way/19712914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/52458762",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Rue du Général Camou",
+        "name:etymology:wikidata": "Q1415335",
+        "oneway": "yes",
+        "sidewalk": "separate",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.3004407,
+            48.8590804
+          ],
+          [
+            2.3003635,
+            48.8590646
+          ],
+          [
+            2.2987288,
+            48.8587272
+          ],
+          [
+            2.2986818,
+            48.8587057
+          ],
+          [
+            2.2985733,
+            48.8586493
+          ]
+        ]
+      },
+      "id": "way/52458762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/59848582",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Rue de l'Université",
+        "name:etymology:wikidata": "Q2845896",
+        "name:zh": "大学路",
+        "sidewalk:both": "separate",
+        "source:maxspeed": "FR:urban",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.3010253,
+            48.8609587
+          ],
+          [
+            2.3009464,
+            48.860945
+          ],
+          [
+            2.2994205,
+            48.8606679
+          ],
+          [
+            2.2986461,
+            48.8605335
+          ],
+          [
+            2.2985427,
+            48.8605106
+          ],
+          [
+            2.2978283,
+            48.8602916
+          ],
+          [
+            2.2969974,
+            48.860019
+          ],
+          [
+            2.296761,
+            48.8599421
+          ],
+          [
+            2.2966247,
+            48.8598976
+          ]
+        ]
+      },
+      "id": "way/59848582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/330438981",
+        "cycleway:both": "no",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Avenue Silvestre de Sacy",
+        "name:etymology:wikidata": "Q507774",
+        "note": "Silvestre avec un i et pas un y (vérifié sur wikipédia)",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "sidewalk:both": "separate",
+        "surface": "sett"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2968652,
+            48.8589324
+          ],
+          [
+            2.2969453,
+            48.858996
+          ],
+          [
+            2.297376,
+            48.8592941
+          ],
+          [
+            2.2974678,
+            48.8593576
+          ]
+        ]
+      },
+      "id": "way/330438981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/994904006",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "name": "Avenue Silvestre de Sacy",
+        "name:etymology:wikidata": "Q507774",
+        "note": "Silvestre avec un i et pas un y (vérifié sur wikipédia)",
+        "oneway": "yes",
+        "sidewalk:both": "separate",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.2967729,
+            48.8588711
+          ],
+          [
+            2.2968652,
+            48.8589324
+          ]
+        ]
+      },
+      "id": "way/994904006"
+    }
+  ]
+}
