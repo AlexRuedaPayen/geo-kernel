@@ -14,7 +14,7 @@ Engine => Platfrom => Plug-ins business cases
 Infrastrcture operators manage thousands of kilometers of assets but cannot inspect them continuously.
 We can identify road, bridge, tunnels and other infrascture segments where satellite observations and terrain characteristics indicate unusual changes, helping prioritize inspecting and maintenance.
 
-#### Inputs (Assets)
+#### Assets
 
 - Roads
 - Bridges
@@ -23,7 +23,7 @@ We can identify road, bridge, tunnels and other infrascture segments where satel
 - Retaining walls
 - Embankments
 
-#### Outputs 
+#### Business value 
 
 - Risk score
 - Terrain anomalies
@@ -35,8 +35,7 @@ We can identify road, bridge, tunnels and other infrascture segments where satel
 
 Railway networks extend over large territories where terrain instability, nearby constrction and environemntal changes can threaten operations. We continuously analyze railway corridors combining Sentinel-1 imagery, DEM-derived terrain infromation and spatial analysis to identify segments requireing closer attention.
 
-#### Inputs (Assets)
-
+#### Assets
 - Railway tracks
 - Stations
 - Embankments
@@ -44,7 +43,7 @@ Railway networks extend over large territories where terrain instability, nearby
 - Switches
 - Rail corridors
 
-#### Outputs
+#### Business value
 
 - Corridor risk map
 - Earthwork detection
@@ -57,7 +56,7 @@ Railway networks extend over large territories where terrain instability, nearby
 Linear utility assest such as pipelines and transmission corridors are exposed to terrain evolution and human activities over thousands of kilometers.
 We monitor these corridors using Earth Observation and geospatil analysis to detect environemental changes and support proactive inspection planning.
 
-#### Inputs (Assets)
+#### Assets
 
 - Oil pipelines
 - Gas pipelines
@@ -66,7 +65,7 @@ We monitor these corridors using Earth Observation and geospatil analysis to det
 - Fiber corridors
 - Utility easements
 
-#### Outputs
+#### Business value
 
 - Corridor monitoring
 - Terrain evolution
@@ -80,7 +79,7 @@ We monitor these corridors using Earth Observation and geospatil analysis to det
 Mining operators require continuous visibility over the evolution of extraction sites, sourrounding terrain and operational activities.
 We analyze satellite imagery and terrain information to monitor site evolution, detect significant changes and generate operational insight for large mining and quarry assets.
 
-#### Inputs (assets)
+#### Assets
 
 - Open-pit mines
 - Quarries
@@ -89,7 +88,7 @@ We analyze satellite imagery and terrain information to monitor site evolution, 
 - Haul roads
 - Industrial platforms
 
-#### Outputs
+#### Business value
 
 - Site evolution
 - Expansion detection
@@ -118,46 +117,117 @@ Plugin:
   infrastcture
 
 ``` 
-#### Assets
+### Assets
 
-Geometry, AOI to study : must contain a geometry type and a CRS (so must be geogrpahy).
-Following format are accepted
+Spatial entity to analyze
+Assets define where GeoKernel will extract geospatial features.
+Every asset must contain a valid geometry and an associated Coordinate Reference System (CRS).
+Depending on the selected business plugin, assets may represent roads, raiways, pipelines, mining sites, buildings or any other spatial object.
 
-.geoparquet
-.geojson
-.shp
+#### Requirements
 
-#### EO Datasets
-
-We will now only work on Sentinel-1 file
-For that we will use a .yaml input that will direct towards the product we must read
+- Valid geometry
+- Valid CRS
+- Unique asset identifier
 
 
+#### Supported formats
+
+- `.geoparquet`
+- `.geojson`
+- `.shp` (not supported as of 02/07/2026)
+
+#### Example
+
+
+| asset_id | asset_type | geometry |
+|----------|------------|----------|
+| RD_001 | Road | LINESTRING(...) |
+| RD_002 | Road | LINESTRING(...) |
+| RW_015 | Railway | LINESTRING(...) |
+
+---
+
+### EO Datasets
+
+The Earth Observation sources used to compute geospatial features.
+
+GeoKernel currently supports **Sentinel-1 GRD** products. Rather than passing imagery directly, users provide a configuration file describing the desired acquisition period and data source. GeoKernel is responsible for locating, reading and processing the required products.
+
+#### Current support
+
+- Sentinel-1 GRD
+
+#### Configuration
+
+```yaml
+eo:
+  provider: local
+  path: /data/sentinel/
+
+  sensor: Sentinel-1
+
+  start_date: 2025-01-01
+  end_date: 2025-03-31
+```
+
+Future versions will support STAC-based discovery from remote catalogs.
 
 ### Terrain
 
-For now will only be 
-Copernicus DEM
+Terrain datasets provide the static topographic context required for feature computation.
+
+GeoKernel currently supports **Copernicus DEM GLO-30**.
+
+#### Current support
+
+- Copernicus DEM GLO-30
+
+#### Configuration
+
+```yaml
+terrain:
+  provider: local
+  path: /data/dem/
+```
+
+Future versions will support additional DEM products and LiDAR-derived elevation models.
 
 
 
-### Business plugin
+## Business plugin
 
-<To be defined>
+Business plugins transform generic geospatial features into domain-specific outputs.
 
-## COnfiguration file
+GeoKernel itself computes reusable spatial features. Plugins interpret these features for a particular application domain without modifying the underlying computation engine.
+
+#### Current plugins
+
+- Infrastructure Intelligence
+- Railway Intelligence
+- Pipeline Intelligence
+- Mining Intelligence
+
+#### Configuration
+
+```yaml
+plugin:
+  name: infrastructure
+```
+### Analysis configuration
 
 It is going to be a .yaml file to control desired resolution on out product
 
 ```{YAML}
-buffer : 100
-window_size : 256
-resolution : 10
-time_window:
-  start: 2025-01-01
-  end: 2026-01-01
-scheduler:
-  tiles: auto
+analysis:
+  buffer_distance: 50
+  segmentation_length: 100
+  target_resolution: 10
+  aggregation:
+    - mean
+    - std
+    - min
+    - max
 ```
 
 
