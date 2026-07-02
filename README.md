@@ -76,3 +76,23 @@ We monitor these corridors using Earth Observation and geospatil analysis to det
 
 
 ### Mining & Quarries
+
+Mining operators require continuous visibility over the evolution of extraction sites, sourrounding terrain and operational activities.
+We analyze satellite imagery and terrain information to monitor site evolution, detect significant changes and generate operational insight for large mining and quarry assets.
+
+#### Inputs (assets)
+
+- Open-pit mines
+- Quarries
+- Waste dumps
+- Tailing areas
+- Haul roads
+- Industrial platforms
+
+#### Outputs
+
+- Site evolution
+- Expansion detection
+- Terrain modification
+- Operational activity indictaors
+- Time series reports
