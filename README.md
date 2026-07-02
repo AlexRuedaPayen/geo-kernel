@@ -96,3 +96,45 @@ We analyze satellite imagery and terrain information to monitor site evolution, 
 - Terrain modification
 - Operational activity indictaors
 - Time series reports
+
+
+
+### Input
+
+#### Assets
+
+Geometry, AOI to study : must contain a geometry type and a CRS (so must be geogrpahy).
+Following format are accepted
+
+.geoparquet
+.geojson
+.shp
+
+#### EO Datasets
+
+For now will only be 
+Sentinel-1 SAFE
+
+### Terrain
+
+For now will only be 
+Copernicus DEM
+
+### COnfiguration file
+
+It is going to be a .yaml file to control desired resolution on out product
+
+```{YAML}
+buffer : 100
+window_size : 256
+resolution : 10
+time_window:
+  start: 2025-01-01
+  end: 2026-01-01
+scheduler:
+  tiles: auto
+```
+
+### Business plugin
+
+A .yaml file not implemented yet
