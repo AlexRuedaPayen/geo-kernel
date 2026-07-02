@@ -33,6 +33,25 @@ We can identify road, bridge, tunnels and other infrascture segments where satel
 
 ### Railway
 
+Railway networks extend over large territories where terrain instability, nearby constrction and environemntal changes can threaten operations. We continuously analyze railway corridors combining Sentinel-1 imagery, DEM-derived terrain infromation and spatial analysis to identify segments requireing closer attention.
+
+#### Inputs (Assets)
+
+- Railway tracks
+- Stations
+- Embankments
+- Cuttings
+- Switches
+- Rail corridors
+
+#### Outputs
+
+- Corridor risk map
+- Earthwork detection
+- Slope indicators
+- Persistent change analysis
+- Maintenance prioritization
+
 ### Pipeline & Utility corridor
 
-### Mining & QUarries
+### Mining & Quarries
