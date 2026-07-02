@@ -101,6 +101,23 @@ We analyze satellite imagery and terrain information to monitor site evolution, 
 
 ### Input
 
+All inputs are listed here
+
+``` {YAML}
+
+AOI:
+  roads.geoparquet
+time:
+  start: 2024-01-01
+  end: 2025-01-01
+Sensor:
+  Sentinel-1 ##for now only this one has been implemented
+DEM:
+  Copernicus 30m
+Plugin:
+  infrastcture
+
+``` 
 #### Assets
 
 Geometry, AOI to study : must contain a geometry type and a CRS (so must be geogrpahy).
@@ -112,15 +129,24 @@ Following format are accepted
 
 #### EO Datasets
 
-For now will only be 
-Sentinel-1 SAFE
+We will now only work on Sentinel-1 file
+For that we will use a .yaml input that will direct towards the product we must read
+
+
 
 ### Terrain
 
 For now will only be 
 Copernicus DEM
 
-### COnfiguration file
+
+
+### Business plugin
+
+A .yaml file not implemented yet
+
+
+## COnfiguration file
 
 It is going to be a .yaml file to control desired resolution on out product
 
@@ -134,7 +160,3 @@ time_window:
 scheduler:
   tiles: auto
 ```
-
-### Business plugin
-
-A .yaml file not implemented yet
