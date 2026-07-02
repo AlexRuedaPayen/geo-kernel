@@ -159,3 +159,45 @@ time_window:
 scheduler:
   tiles: auto
 ```
+
+
+## Output
+
+### Feature time-series dataset
+
+a GeoParquet file, with object level features over time
+
+### Latest feature snapshot
+
+a GeoParquet file, with one row per asset for most recent acquisition
+
+### Summary Features
+
+a GeoParquet file, with for every asset : trends, min/max, variance, persistent change etc.
+
+### Derived raster layers
+
+a COG/GeoTIFF, with pixel-level feature maps
+
+### Derived geometries
+
+a GeoParquet, with buffers segments, sampling footprints
+
+### Plugin outputs
+
+a GeoParquet, with risk/activity/priority scores
+
+### Run metdata
+
+a JSON, summarizing parametrs, versions, CRS and data sources
+
+### Benchmarks
+
+a JSON with runtime, memory, throughput, tile count etc.
+
+### Previws
+
+GeoJSON/PNG files with human-readable demo artifacts
+
+
+
