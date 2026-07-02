@@ -54,4 +54,25 @@ Railway networks extend over large territories where terrain instability, nearby
 
 ### Pipeline & Utility corridor
 
+Linear utility assest such as pipelines and transmission corridors are exposed to terrain evolution and human activities over thousands of kilometers.
+We monitor these corridors using Earth Observation and geospatil analysis to detect environemental changes and support proactive inspection planning.
+
+#### Inputs (Assets)
+
+- Oil pipelines
+- Gas pipelines
+- Hydrogen pipelines
+- Power lines
+- Fiber corridors
+- Utility easements
+
+#### Outputs
+
+- Corridor monitoring
+- Terrain evolution
+- Earthwork detection
+- Risk segmentation
+- Inspection recommendations
+
+
 ### Mining & Quarries
